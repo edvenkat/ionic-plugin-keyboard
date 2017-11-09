@@ -36,7 +36,7 @@ public class IonicKeyboard extends CordovaPlugin {
                     //http://stackoverflow.com/a/7696791/1091751
                     InputMethodManager inputManager = (InputMethodManager) cordova.getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
                     View v = cordova.getActivity().getCurrentFocus();
-
+                    cordova.getActivity().getWindow().setFlags(LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH, LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH);
                     if (v == null) {
                         callbackContext.error("No current focus");
                     } else {
