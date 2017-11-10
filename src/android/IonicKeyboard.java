@@ -36,7 +36,7 @@ public class IonicKeyboard extends CordovaPlugin {
                     //http://stackoverflow.com/a/7696791/1091751
                     InputMethodManager inputManager = (InputMethodManager) cordova.getActivity().getSystemService(Context.INPUT_METHOD_SERVICE);
                     View v = cordova.getActivity().getCurrentFocus();
-                    cordova.getActivity().getWindow().setFlags(LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH, LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH);
+                    
                     if (v == null) {
                         callbackContext.error("No current focus");
                     } else {
@@ -64,7 +64,7 @@ public class IonicKeyboard extends CordovaPlugin {
                     DisplayMetrics dm = new DisplayMetrics();
                     cordova.getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
                     final float density = dm.density;
-
+                    cordova.getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH, WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH);
                     //http://stackoverflow.com/a/4737265/1091751 detect if keyboard is showing
                     rootView = cordova.getActivity().getWindow().getDecorView().findViewById(android.R.id.content).getRootView();
                     list = new OnGlobalLayoutListener() {
