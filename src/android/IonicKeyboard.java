@@ -32,8 +32,8 @@ public class IonicKeyboard extends CordovaPlugin {
     }
 
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
-         Window window = cordova.getActivity().getWindow();
-         window.setFlags(WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH, WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH);
+        // Window window = cordova.getActivity().getWindow();
+        // window.setFlags(WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH, WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH);
                    
         
         if ("close".equals(action)) {
