@@ -75,6 +75,9 @@ public class IonicKeyboard extends CordovaPlugin {
                     
                     
                     //http://stackoverflow.com/a/4737265/1091751 detect if keyboard is showing
+                    
+                   
+                    
                     rootView = cordova.getActivity().getWindow().getDecorView().findViewById(android.R.id.content).getRootView();
                     list = new OnGlobalLayoutListener() {
                         int previousHeightDiff = 0;
@@ -121,6 +124,20 @@ public class IonicKeyboard extends CordovaPlugin {
                             previousHeightDiff = pixelHeightDiff;
                          }
                     };
+                    
+                   Spinner spinner = (Spinner) findViewById(R.id.spinner);
+                   if(spinner.isShown()){
+                        String msg = "S"
+                                result = new PluginResult(PluginResult.Status.OK, msg);
+                                result.setKeepCallback(true);
+                                callbackContext.sendPluginResult(result);
+                    }
+                    else{
+                        String msg = "H";
+                                result = new PluginResult(PluginResult.Status.OK, msg);
+                                result.setKeepCallback(true);
+                                callbackContext.sendPluginResult(result);
+                    } 
 
                     rootView.getViewTreeObserver().addOnGlobalLayoutListener(list);
 
