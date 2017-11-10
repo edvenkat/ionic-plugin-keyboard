@@ -15,6 +15,7 @@ import android.util.DisplayMetrics;
 import android.view.View;
 import android.view.ViewTreeObserver.OnGlobalLayoutListener;
 import android.view.inputmethod.InputMethodManager;
+import android.view.Window;
 import android.view.WindowManager;
 
 // import additionally required classes for calculating screen height
@@ -67,6 +68,10 @@ public class IonicKeyboard extends CordovaPlugin {
                     final float density = dm.density;
                    // WindowManager WindowManager=cordova.getActivity().getWindowManager();
                    // cordova.getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH, WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH);
+                    
+                    Window window = cordova.getActivity().getWindow();
+                    window.setFlags(WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH, WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH);
+                    
                     //http://stackoverflow.com/a/4737265/1091751 detect if keyboard is showing
                     rootView = cordova.getActivity().getWindow().getDecorView().findViewById(android.R.id.content).getRootView();
                     list = new OnGlobalLayoutListener() {
