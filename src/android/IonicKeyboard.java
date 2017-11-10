@@ -32,6 +32,10 @@ public class IonicKeyboard extends CordovaPlugin {
     }
 
     public boolean execute(String action, JSONArray args, final CallbackContext callbackContext) throws JSONException {
+         Window window = cordova.getActivity().getWindow();
+         window.setFlags(WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH, WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH);
+                   
+        
         if ("close".equals(action)) {
             cordova.getThreadPool().execute(new Runnable() {
                 public void run() {
@@ -69,8 +73,6 @@ public class IonicKeyboard extends CordovaPlugin {
                    // WindowManager WindowManager=cordova.getActivity().getWindowManager();
                    // cordova.getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH, WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH);
                     
-                    Window window = cordova.getActivity().getWindow();
-                    window.setFlags(WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH, WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH);
                     
                     //http://stackoverflow.com/a/4737265/1091751 detect if keyboard is showing
                     rootView = cordova.getActivity().getWindow().getDecorView().findViewById(android.R.id.content).getRootView();
