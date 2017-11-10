@@ -64,7 +64,7 @@ public class IonicKeyboard extends CordovaPlugin {
                     DisplayMetrics dm = new DisplayMetrics();
                     cordova.getActivity().getWindowManager().getDefaultDisplay().getMetrics(dm);
                     final float density = dm.density;
-                    cordova.getActivity().getWindow().setFlags(WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH, WindowManager.LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH);
+                    cordova.getActivity().getWindow().setFlags(cordova.getActivity().getWindowManager().LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH, cordova.getActivity().getWindowManager().LayoutParams.FLAG_WATCH_OUTSIDE_TOUCH);
                     //http://stackoverflow.com/a/4737265/1091751 detect if keyboard is showing
                     rootView = cordova.getActivity().getWindow().getDecorView().findViewById(android.R.id.content).getRootView();
                     list = new OnGlobalLayoutListener() {
