@@ -127,12 +127,14 @@ public class IonicKeyboard extends CordovaPlugin {
                     
                    Spinner spinner = cordova.getActivity().getWindow().getDecorView().findViewById(android.R.id.spinner);
                    if(spinner.isShown()){
+                       PluginResult result;
                         String msg = "S";
                                 result = new PluginResult(PluginResult.Status.OK, msg);
                                 result.setKeepCallback(true);
                                 callbackContext.sendPluginResult(result);
                     }
                     else{
+                        PluginResult result;
                         String msg = "H";
                                 result = new PluginResult(PluginResult.Status.OK, msg);
                                 result.setKeepCallback(true);
