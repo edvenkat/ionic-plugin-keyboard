@@ -121,11 +121,14 @@ public class IonicKeyboard extends CordovaPlugin {
                                 result.setKeepCallback(true);
                                 callbackContext.sendPluginResult(result);
                             }*/
-                            String msg = "H";
-                            result = new PluginResult(PluginResult.Status.OK, msg);
-                            result.setKeepCallback(true);
-                            callbackContext.sendPluginResult(result);
+                                                  
+                            
+                             String msg = "S";
+                                result = new PluginResult(PluginResult.Status.OK, msg);
+                                result.setKeepCallback(true);
+                                callbackContext.sendPluginResult(result);
                             previousHeightDiff = pixelHeightDiff;
+                            
                          }
                     };
                     
