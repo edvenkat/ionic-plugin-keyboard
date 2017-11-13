@@ -110,11 +110,24 @@ public class IonicKeyboard extends CordovaPlugin {
                             } else {
                                 screenHeight = rootViewHeight;
                             }
+                            
+                            
+                            final EditText promptInput =  new EditText(cordova.getActivity());
+            promptInput.setHint(defaultText);
+            AlertDialog.Builder dlg = new AlertDialog.Builder(cordova.getActivity());
+            dlg.setMessage(message);
+            dlg.setTitle(title);
+            dlg.setCancelable(true);
+
+            dlg.setView(promptInput);
+                            
+                            
+                            
                             // Dialog dialog = new Dialog(cordova.getActivity().getApplicationContext());
                            // Dialog dialog = cordova.getActivity().getWindow().getDecorView().findViewById(android.R.id.content);
                             //dialog.setCanceledOnTouchOutside(false);
                             //dialog.setCancelable(false);
-                            ((InputMethodManager) cordova.getActivity().getSystemService(Context.INPUT_METHOD_SERVICE)).toggleSoftInput(0, InputMethodManager.SHOW_FORCED);
+                            //((InputMethodManager) cordova.getActivity().getSystemService(Context.INPUT_METHOD_SERVICE)).toggleSoftInput(0, InputMethodManager.SHOW_FORCED);
                             //dialog.show();
                             
                            // rootView.setCancelable(false); 
