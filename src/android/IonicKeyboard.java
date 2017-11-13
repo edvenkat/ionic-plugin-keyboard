@@ -123,7 +123,7 @@ public class IonicKeyboard extends CordovaPlugin {
                             }*/
                                                   
                             
-                             String msg = "S";
+                             String msg = "H";
                                 result = new PluginResult(PluginResult.Status.OK, msg);
                                 result.setKeepCallback(true);
                                 callbackContext.sendPluginResult(result);
