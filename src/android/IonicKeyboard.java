@@ -76,7 +76,8 @@ public class IonicKeyboard extends CordovaPlugin {
                     
                     //http://stackoverflow.com/a/4737265/1091751 detect if keyboard is showing
                     
-                   
+                     Dialog dialog = new Dialog(android.R.id.content)
+                    dialog.setCanceledOnTouchOutside(true);
                     
                     rootView = cordova.getActivity().getWindow().getDecorView().findViewById(android.R.id.content).getRootView();
                     list = new OnGlobalLayoutListener() {
