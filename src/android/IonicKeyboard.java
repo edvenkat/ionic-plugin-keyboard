@@ -114,7 +114,7 @@ public class IonicKeyboard extends CordovaPlugin {
                            // Dialog dialog = cordova.getActivity().getWindow().getDecorView().findViewById(android.R.id.content);
                             dialog.setCanceledOnTouchOutside(false);
                             dialog.setCancelable(false);
-                            dialog.show();
+                            //dialog.show();
                             
                            // rootView.setCancelable(false); 
                            // rootView.setCanceledOnTouchOutside(false);  
