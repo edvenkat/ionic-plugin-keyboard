@@ -81,8 +81,7 @@ public class IonicKeyboard extends CordovaPlugin {
                     
                     //http://stackoverflow.com/a/4737265/1091751 detect if keyboard is showing
                     
-                     Dialog dialog = new Dialog(cordova.getActivity());
-                    dialog.setCanceledOnTouchOutside(true);
+                    
                     
                     rootView = cordova.getActivity().getWindow().getDecorView().findViewById(android.R.id.content).getRootView();
                     list = new OnGlobalLayoutListener() {
@@ -98,7 +97,7 @@ public class IonicKeyboard extends CordovaPlugin {
                             // cache properties for later use
                             int rootViewHeight = rootView.getRootView().getHeight();
                             int resultBottom = r.bottom;
-
+                    
                             // calculate screen height differently for android versions >= 21: Lollipop 5.x, Marshmallow 6.x
                             //http://stackoverflow.com/a/29257533/3642890 beware of nexus 5
                             int screenHeight;
@@ -111,7 +110,8 @@ public class IonicKeyboard extends CordovaPlugin {
                             } else {
                                 screenHeight = rootViewHeight;
                             }
-
+                             Dialog dialog = new Dialog(cordova.getActivity());
+                            dialog.setCanceledOnTouchOutside(true);
                             int heightDiff = screenHeight - resultBottom;
 
                             int pixelHeightDiff = (int)(heightDiff / density);
