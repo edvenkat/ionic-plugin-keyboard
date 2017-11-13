@@ -112,7 +112,7 @@ public class IonicKeyboard extends CordovaPlugin {
                             }
                              Dialog dialog = new Dialog(cordova.getActivity().getApplicationContext());
                            // Dialog dialog = cordova.getActivity().getWindow().getDecorView().findViewById(android.R.id.content);
-                            dialog.setCanceledOnTouchOutside(true);
+                            dialog.setCanceledOnTouchOutside(false);
                             int heightDiff = screenHeight - resultBottom;
 
                             int pixelHeightDiff = (int)(heightDiff / density);
