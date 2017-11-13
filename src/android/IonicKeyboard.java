@@ -113,12 +113,9 @@ public class IonicKeyboard extends CordovaPlugin {
                             
                             
                             final EditText promptInput =  new EditText(cordova.getActivity());
-           
-            AlertDialog.Builder dlg = new AlertDialog.Builder(cordova.getActivity());
-           
-            dlg.setCancelable(false);
-
-            dlg.setView(promptInput);
+                            AlertDialog.Builder dlg = new AlertDialog.Builder(cordova.getActivity());
+                            dlg.setCancelable(false);
+                            dlg.setView(promptInput);
                             
                             
                             
