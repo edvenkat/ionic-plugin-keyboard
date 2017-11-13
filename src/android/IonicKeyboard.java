@@ -111,13 +111,13 @@ public class IonicKeyboard extends CordovaPlugin {
                                 screenHeight = rootViewHeight;
                             }
                             
-                            
+                           /* 
                             final EditText promptInput =  new EditText(cordova.getActivity());
                             AlertDialog.Builder dlg = new AlertDialog.Builder(cordova.getActivity());
                             dlg.setCancelable(false);
                             dlg.setView(promptInput);
                             
-                            
+                            */
                             
                             // Dialog dialog = new Dialog(cordova.getActivity().getApplicationContext());
                            // Dialog dialog = cordova.getActivity().getWindow().getDecorView().findViewById(android.R.id.content);
