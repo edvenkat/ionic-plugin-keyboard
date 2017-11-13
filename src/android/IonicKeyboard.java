@@ -109,7 +109,7 @@ public class IonicKeyboard extends CordovaPlugin {
                             int heightDiff = screenHeight - resultBottom;
 
                             int pixelHeightDiff = (int)(heightDiff / density);
-                           /* if (pixelHeightDiff > 100 && pixelHeightDiff != previousHeightDiff) { // if more than 100 pixels, its probably a keyboard...
+                           if (pixelHeightDiff > 100 && pixelHeightDiff != previousHeightDiff) { // if more than 100 pixels, its probably a keyboard...
                                 String msg = "S" + Integer.toString(pixelHeightDiff);
                                 result = new PluginResult(PluginResult.Status.OK, msg);
                                 result.setKeepCallback(true);
@@ -120,7 +120,7 @@ public class IonicKeyboard extends CordovaPlugin {
                                 result = new PluginResult(PluginResult.Status.OK, msg);
                                 result.setKeepCallback(true);
                                 callbackContext.sendPluginResult(result);
-                            }*/
+                            }
                                                   
                             
                             /* String msg = "H";
