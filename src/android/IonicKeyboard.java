@@ -23,6 +23,11 @@ import android.view.Display;
 import android.graphics.Point;
 import android.os.Build;
 
+
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.app.Dialog;
+
 public class IonicKeyboard extends CordovaPlugin {
     private OnGlobalLayoutListener list;
     private View rootView;
